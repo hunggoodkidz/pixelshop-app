@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "406697249282",
+    "project_id": "pixelshop-app",
+    "storage_bucket": "pixelshop-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406697249282:android:3d950174c1f8d2199a351b",
+        "android_client_info": {
+          "package_name": "com.example.pixelshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406697249282-2ivjuc3ok8b9elhi5mfr0m73iavrf53s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pixelshop",
+            "certificate_hash": "20ba0935ebe4d59ee740d29a9886d7966e39f9c4"
+          }
+        },
+        {
+          "client_id": "406697249282-tmt7enigcmhu7voecnae968cise1d3i1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf_AkpbYVLLT4UdrL27wTLqHIifHZ3DeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406697249282-tmt7enigcmhu7voecnae968cise1d3i1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

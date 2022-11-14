@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_bill_admin.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_contact.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_dangsanpham.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_home.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_product.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_search.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_thongke.xml" value="0.1" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/app_bar_main_screen.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_banner.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_giohang.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_hoadon.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanpham.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanpham_noibat.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanphamgoiy.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanphamhanquoc.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanphamlau.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanphammicay.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanphamyeuthich.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dongsanphamthucuong.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_bill.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_cart.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_home.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_profile.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_thongtinungdung.xml" value="0.20168066580377575" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/item_product.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/layouttest.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_bill_admin.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_chart_bill.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_contact.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_content_bill.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_content_product.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_dangsanpham.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_home.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_home_admin.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_main.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_maps.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_maps_lien_he_cua_hang.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_payment.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_sign_in.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_sign_up.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_thongke.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/app_bar_main_screen.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/dialog_profile.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/dialog_thanhtoan.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/dong_sanphammicay.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/dong_sanphamyeuthich.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/fragment_bill.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/fragment_cart.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/fragment_thongtinungdung.xml" value="0.23278985507246377" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_bill_admin.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_contact.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_content_bill.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_content_product.xml" value="0.4" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_dangsanpham.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_maps_lien_he_cua_hang.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/activity_payment.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/app_bar_main_screen.xml" value="0.14114583333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/dialog_profile.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/dialog_update_trangthai.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/dong_sanpham.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/dong_sanphammicay.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/fragment_home.xml" value="0.18162278344975819" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/fragment_thongtinungdung.xml" value="0.14114583333333333" />
+        <entry key="..\:/Users/dotha/AndroidStudioProjects/AppCoffeeThanhNhanSHop/app/src/main/res/layout/item_product.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

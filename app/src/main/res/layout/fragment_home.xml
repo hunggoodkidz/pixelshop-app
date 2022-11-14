@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="390dp"
+                android:layout_height="120dp" />
+
+        </androidx.cardview.widget.CardView>
+
+            <ImageButton
+                android:id="@+id/home_danhmuc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                 />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+
+        <ImageView
+            android:layout_marginTop="-110dp"
+            android:layout_width="400dp"
+            android:layout_height="393dp"
+            android:src="@drawable/banner12z"
+            android:layout_marginBottom="-120dp"/>
+        <TextView
+
+            android:id="@+id/txtsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:text="Danh Sách Sản Phẩm"
+            android:textColor="@color/purple_200"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvSP"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            />
+
+        <TextView
+            android:layout_marginTop="-10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:elevation="5dp"
+            android:text="Sản Phẩm Nổi Bật"
+            android:textColor="@color/purple_200"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvNB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:elevation="5dp"
+            android:layout_marginTop="-10dp"
+            android:text="Bạn ơi đặt mua ngay"
+            android:textColor="@color/purple_200"
+            android:layout_marginBottom="2dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="390dp"
+            android:layout_height="120dp"
+            android:background="@drawable/banner34"/>
+<!--        <ImageView-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_width="190dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:background="@drawable/banner2"/>-->
+
+</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:elevation="5dp"
+            android:text="Đa dạng sản phẩm chính hãng"
+            android:textColor="@color/purple_200"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvTU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginTop="-10dp"
+            android:layout_width="390dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/banner67"
+       />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvHQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="Hỗ trợ trả góp lãi xuất 0%"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-10dp"
+            android:text="gợi ý list..."
+            android:textColor="#c0c0c0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvMC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="370dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/banner56"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:elevation="5dp"
+            android:layout_marginTop="2dp"
+            android:text="Món ăn được yêu thích của quán"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvYT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="390dp"
+            android:layout_height="180dp"
+
+            android:background="@drawable/banner34"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="Lẩu cùng bạn bè và gia đình"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-10dp"
+            android:text="gợi ý list cho bạn nè!"
+            android:textColor="#c0c0c0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvLau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="390dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="-200dp"
+            android:background="@drawable/banner34"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:text="Gợi ý thêm các món ngon tại nhà hàng Thanh Nhàn"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvGY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>
