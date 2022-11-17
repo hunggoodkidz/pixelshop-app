@@ -70,7 +70,7 @@ public class SignUpActivity extends AppCompatActivity  implements UserView , Vie
     public void OnAuthEmail() {
         FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification();
 
-        Toast.makeText(this, "Hãy vào gamil để xác thực tài khoản của bạn !", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Hãy vào gmail để xác thực tài khoản của bạn !", Toast.LENGTH_SHORT).show();
         finish();
     }
 

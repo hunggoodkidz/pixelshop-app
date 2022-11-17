@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name="com.example.pixelshop.View.Account.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.pixelshop.View.Admin.ProductActivity"
             android:exported="false" />
         <activity
@@ -71,10 +74,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.pixelshop.View.Admin.HomeAdminActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.example.pixelshop.View.Admin.BillADMiNActivity"
             android:screenOrientation="portrait" />

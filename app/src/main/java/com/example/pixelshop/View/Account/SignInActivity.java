@@ -47,6 +47,13 @@ public class SignInActivity  extends AppCompatActivity  implements UserView , Vi
 
             }
         });
+        findViewById(R.id.forgot_password).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent( SignInActivity.this, ForgotPasswordActivity.class));
+
+            }
+        });
 
     }
 

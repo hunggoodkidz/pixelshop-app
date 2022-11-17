@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/ic_arrow_drop_down_black_24dp.xml" value="0.151" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_bill_admin.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_chart_bill.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_contact.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_dangsanpham.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_forgot_password.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_home.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_payment.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_product.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_search.xml" value="0.23278985507246377" />
-        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_thongke.xml" value="0.1" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_sign_in.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_sign_up.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_thongke.xml" value="0.20168066580377575" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/app_bar_main_screen.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_banner.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_giohang.xml" value="0.23278985507246377" />
