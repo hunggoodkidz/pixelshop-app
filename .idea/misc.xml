@@ -3,20 +3,56 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/debug/res/font/open_sans.xml" value="0.2794871794871795" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/debug/res/font/open_sans_bold.xml" value="0.2794871794871795" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable-anydpi/ic_action_buttonadd.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable-mdpi/ic_baseline_product_24.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable-v24/ic_arrow_back.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/border.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/border10.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/border2.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/borderline.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/home_danhmuc.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/home_deal.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/home_food.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/home_uathich.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/home_vi.xml" value="0.151" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/ic_arrow_drop_down_black_24dp.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/ic_baseline_pie_chart_24.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.148" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.151" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_add_category.xml" value="0.22916666666666666" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_add_category_admin.xml" value="0.22916666666666666" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_bill_admin.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_chart_bill.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_chart_menu.xml" value="0.25364583333333335" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_contact.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_content_bill.xml" value="0.23097826086956522" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_content_product.xml" value="0.23097826086956522" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_dangsanpham.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_forgot_password.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_home.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_home_admin.xml" value="0.20168066580377575" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_main.xml" value="0.23097826086956522" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_maps.xml" value="0.23097826086956522" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_maps_lien_he_cua_hang.xml" value="0.23097826086956522" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_payment.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_product.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_product_details.xml" value="0.23097826086956522" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_profile_user.xml" value="0.23097826086956522" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_search.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_sign_in.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_sign_in_admin.xml" value="0.23097826086956522" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_sign_up.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_thongke.xml" value="0.20168066580377575" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/activity_thongke2.xml" value="0.23097826086956522" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/app_bar_main_screen.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/category_row_items.xml" value="0.806722663215103" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dialog_profile.xml" value="0.23097826086956522" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dialog_thanhtoan.xml" value="0.23097826086956522" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dialog_update_trangthai.xml" value="0.23097826086956522" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_banner.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_giohang.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_hoadon.xml" value="0.23278985507246377" />
@@ -29,12 +65,17 @@
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dong_sanphamyeuthich.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/dongsanphamthucuong.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_bill.xml" value="0.23278985507246377" />
-        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_cart.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_cart.xml" value="0.20168066580377575" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_home.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_profile.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/fragment_thongtinungdung.xml" value="0.20168066580377575" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/item_product.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/layouttest.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/layout/product_amount.xml" value="0.23097826086956522" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/menu/menu_dashboard.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/menu/menu_logined.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/menu/menu_main.xml" value="0.24895833333333334" />
+        <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/PixelShop/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1235" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_bill_admin.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_chart_bill.xml" value="0.23278985507246377" />
         <entry key="..\:/Android_Project/MainProject/FirstCommit/TMDT_Apple/TMDT_Apple/app/src/main/res/layout/activity_contact.xml" value="0.23278985507246377" />

@@ -21,13 +21,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.pixelshop.View.Account.ForgotPasswordActivity"
+            android:name="com.example.pixelshop.Activity.Admin.AddCategoryAdminActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.pixelshop.View.Admin.ProductActivity"
+            android:name="com.example.pixelshop.Activity.Admin.AddCategoryActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.pixelshop.dangsanphamActivity"
+            android:name="com.example.pixelshop.Activity.Account.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.pixelshop.Activity.Admin.ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.pixelshop.Activity.Admin.AddProductAdminActivity"
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -38,10 +44,10 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name="com.example.pixelshop.View.Bill.CartActivity"
+            android:name="com.example.pixelshop.Activity.Bill.CartActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Bill.ContentBillAdMinActivity"
+            android:name="com.example.pixelshop.Activity.Bill.ContentBillAdMinActivity"
             android:screenOrientation="portrait" />
 
         <meta-data
@@ -49,41 +55,47 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.example.pixelshop.View.HomeActivity"
+            android:name="com.example.pixelshop.Activity.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Bill.ContentProDuctActivity"
+            android:name="com.example.pixelshop.Activity.Bill.ContentProDuctActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Admin.SignInAdminActivity"
+            android:name="com.example.pixelshop.Activity.Admin.SignInAdminActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.ContactActivity"
+            android:name="com.example.pixelshop.Activity.ContactActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Admin.ChartBillActivity"
+            android:name="com.example.pixelshop.Activity.Admin.ChartBillActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Bill.ContentBillActivity"
+            android:name="com.example.pixelshop.Activity.Admin.ChartMenuActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.SearchActivity"
+            android:name="com.example.pixelshop.Activity.Bill.ContentBillActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.ThongKeDanhMucActivity"
+            android:name="com.example.pixelshop.Activity.SearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Admin.HomeAdminActivity"
+            android:name="com.example.pixelshop.Activity.ThongKeDanhMucActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.pixelshop.Activity.ThongKeDanhMuc2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.pixelshop.Activity.Admin.HomeAdminActivity"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name="com.example.pixelshop.View.Admin.BillADMiNActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Account.SignInActivity"
+            android:name="com.example.pixelshop.Activity.Admin.BillADMiNActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.pixelshop.View.Account.SignUpActivity"
+            android:name="com.example.pixelshop.Activity.Account.SignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.pixelshop.Activity.Account.SignUpActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.example.pixelshop.MainActivity"

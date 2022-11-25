@@ -10,7 +10,7 @@
         style="@style/ThemeOverlay.AppCompat.Dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
+        android:background="@color/colorPrimaryDark"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 
@@ -75,60 +75,6 @@
                 android:textColor="#4b0082"
                 android:textSize="14sp" />
 
-            <ImageView
-
-                android:id="@+id/img_thongtin"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/iconlap"
-                android:scaleType="fitXY" />
-
-            <TextView
-                android:id="@+id/text_thongtin"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Đảm bảo chính hãng 100%"
-                android:layout_marginLeft="-1dp"
-                android:textColor="@color/black" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="-105dp"
-                android:background="@drawable/momo"
-                android:scaleType="fitXY" />
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="3dp"
-                android:text="Thanh toán momo tiện lợi"
-
-                android:textColor="@color/black" />
-
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="155dp"
-                android:layout_marginTop="-105dp"
-                android:background="@drawable/free"
-                android:scaleType="fitXY" />
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="1dp"
-                android:text="Freeship quanh khu vực quận 2"
-
-                android:textColor="@color/black" />
-
 
         </LinearLayout>
 
@@ -137,7 +83,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="-80dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1">
 
         <TextView
@@ -155,11 +101,11 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginLeft="80dp"
-        android:background="@drawable/button"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:layout_marginTop="5dp"
         android:layout_marginRight="80dp"
         android:layout_marginBottom="5dp"
         android:elevation="5dp"
-        android:text="Thêm vào giỏ hàng" />
+        android:text="Add to Cart" />
 
 </LinearLayout>

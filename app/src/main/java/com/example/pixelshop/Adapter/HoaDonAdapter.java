@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pixelshop.Model.HoaDonModels;
 import com.example.pixelshop.Presenter.SetOnItemClick;
 import com.example.pixelshop.R;
-import com.example.pixelshop.View.Bill.ContentBillActivity;
+import com.example.pixelshop.Activity.Bill.ContentBillActivity;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;

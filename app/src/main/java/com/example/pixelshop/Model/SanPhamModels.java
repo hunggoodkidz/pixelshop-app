@@ -370,14 +370,14 @@ public  void  HandlegetDataSanPhamMiCay(){
              case  2: key="tensp";
 
                  db.collection("SanPham").
-                         whereLessThanOrEqualTo(key,loaisp).
+                         whereEqualTo(key,loaisp).
                          get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                      @Override
                      public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
                          if(queryDocumentSnapshots.size()>0){
                              for(QueryDocumentSnapshot d : queryDocumentSnapshots){
 
-                                 callback.getDataSanPhamNB(d.getId(),d.getString("tensp"),
+                                 callback.getDataSanPham(d.getId(),d.getString("tensp"),
                                          d.getLong("giatien"),d.getString("hinhanh"),
                                          d.getString("loaisp"),d.getString("mota"),
                                          d.getLong("soluong"),d.getString("hansudung"),

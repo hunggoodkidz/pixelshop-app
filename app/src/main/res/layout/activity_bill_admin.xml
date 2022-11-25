@@ -7,7 +7,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         style="@style/ThemeOverlay.AppCompat.Dark"
         android:id="@+id/toolbar"
-        android:background="@color/purple_200"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import com.example.pixelshop.Model.SanPhamModels;
 import com.example.pixelshop.Presenter.SetOnItemClick;
 import com.example.pixelshop.R;
-import com.example.pixelshop.View.Bill.ContentProDuctActivity;
+import com.example.pixelshop.Activity.Bill.ContentProDuctActivity;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;

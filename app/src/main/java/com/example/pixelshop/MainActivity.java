@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.example.pixelshop.View.Account.SignInActivity;
-import com.example.pixelshop.View.HomeActivity;
+import com.example.pixelshop.Activity.Account.SignInActivity;
+import com.example.pixelshop.Activity.HomeActivity;
 
 public class MainActivity extends AppCompatActivity {
 

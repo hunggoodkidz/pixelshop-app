@@ -9,27 +9,46 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.appcompat.widget.Toolbar
+        z<androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             style="@style/ThemeOverlay.AppCompat.Dark"
-            android:background="@color/purple_200"
+            android:background="@color/colorPrimaryDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:inputType="text"
                 android:imeOptions="actionSearch"
                 android:singleLine="true"
-                android:hint="Mời bạn nhập món"
-                android:textColor="#000000"
+                android:hint="Tìm kiếm sản phẩm"
+                android:textColor="@color/colorPrimaryDark"
                 android:drawablePadding="10dp"
                 android:drawableLeft="@drawable/ic_baseline_search_24"
                 android:id="@+id/editSearch"
                 android:textSize="16sp"
-                android:layout_width="match_parent"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        </androidx.appcompat.widget.Toolbar>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_search_24" />
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
          <FrameLayout
              android:id="@+id/framelayout"
              android:layout_width="match_parent"

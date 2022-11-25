@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="530dp"
         android:background="@drawable/roud"
+        android:backgroundTint="@color/white"
         android:orientation="vertical">
 
         <ImageView
@@ -19,7 +20,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="end"
-            android:background="#008000"
+            android:background="#80001A"
             android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -102,7 +103,7 @@
             android:layout_marginRight="5dp"
             android:padding="8dp"
             android:text="Tổng Tiền : 2555555 đ "
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="@color/black"
             android:textSize="23sp" />
 
         <Button

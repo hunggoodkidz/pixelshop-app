@@ -12,7 +12,7 @@
             android:id="@+id/layout_add"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/colorPrimary"
+            android:background="#9C27B0"
             android:gravity="center_vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -313,8 +313,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
-                    android:visibility="gone"
-                    android:text="Xoá" />
+                    android:text="Xoá"
+                    android:visibility="gone" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_edit"
@@ -322,8 +322,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
-                    android:visibility="gone"
-                    android:text="Lưu" />
+                    android:text="Lưu"
+                    android:visibility="gone" />
             </LinearLayout>
 
         </LinearLayout>

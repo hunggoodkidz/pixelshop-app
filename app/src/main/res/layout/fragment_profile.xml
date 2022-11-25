@@ -175,37 +175,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/rank" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Hạng " />
-
-                <TextView
-                    android:id="@+id/txtrank"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:drawableRight="@drawable/ic_baseline_navigate_next_24"
-                    android:gravity="end"
-                    android:text="Bạn đang hạng bạch kim"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

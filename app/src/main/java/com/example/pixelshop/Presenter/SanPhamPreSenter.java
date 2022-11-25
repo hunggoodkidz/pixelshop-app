@@ -8,7 +8,6 @@ public class SanPhamPreSenter implements  ISanPham{
     public   SanPhamPreSenter(SanPhamView callback){
         this.callback=callback;
         sanPhamModels = new SanPhamModels(this);
-
     }
     public void HandlegetDataSanPham(){
         sanPhamModels.HandlegetDataSanPham();

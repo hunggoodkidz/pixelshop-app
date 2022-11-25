@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pixelshop.Model.HoaDonModels;
 import com.example.pixelshop.Presenter.SetOnItemClick;
 
-import com.example.pixelshop.View.Bill.ContentBillAdMinActivity;
+import com.example.pixelshop.Activity.Bill.ContentBillAdMinActivity;
 import com.example.pixelshop.R;
 
 
