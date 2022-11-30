@@ -50,11 +50,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-28dp"
-        android:src="@drawable/rating"
-        app:tint="@color/purple_200" />
 
 </LinearLayout>

@@ -41,8 +41,8 @@
 
     <ImageView
         android:id="@+id/image_product"
-        android:layout_width="336dp"
-        android:layout_height="305dp"
+        android:layout_width="267dp"
+        android:layout_height="231dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -54,7 +54,7 @@
         android:id="@+id/txttensp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="TextView"
@@ -65,12 +65,12 @@
 
     <ScrollView
         android:id="@+id/scroll"
-        android:layout_width="364dp"
-        android:layout_height="139dp"
+        android:layout_width="342dp"
+        android:layout_height="185dp"
         android:layout_marginTop="72dp"
         android:layout_weight="1"
         app:layout_constraintEnd_toEndOf="@+id/image_product"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/image_product"
         app:layout_constraintTop_toBottomOf="@+id/txttensp">
 
@@ -92,9 +92,9 @@
         android:id="@+id/btndathang"
         android:layout_width="250dp"
         android:layout_height="55dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="88dp"
-        android:backgroundTint="#B417CF"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="#CF1757"
         android:fontFamily="@font/open_sans_semibold"
         android:text="ADD TO CART"
         android:textColor="#FFFFFF"
@@ -109,20 +109,20 @@
 
     <TextView
         android:id="@+id/txtgiatien"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="173dp"
+        android:layout_height="28dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans_bold"
         android:text="TextView"
-        android:textColor="#9C27B0"
+        android:textColor="#35B027"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/scroll"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txttensp"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,39 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:layout_above="@id/btnthanhtoan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:text="@string/amount_to_be_paid"
-            android:textColor="@color/textColorPrimary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txt_amount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:paddingRight="10dp"
-            android:text="0 Đ"
-            android:textColor="@color/textColorPrimary"
-            android:textSize="18sp" />
-    </LinearLayout>
-
     <Button
         android:id="@+id/btnthanhtoan"
         android:layout_width="match_parent"
@@ -62,7 +29,6 @@
         android:elevation="8dp"
         android:text="Thanh Toán" />
     <ProgressBar
-
         android:id="@+id/progressbar"
         android:layout_centerInParent="true"
         android:layout_width="42dp"

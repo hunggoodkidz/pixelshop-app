@@ -17,13 +17,25 @@
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcv"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/text" />
+        android:id="@+id/swiperefresh"
+        android:layout_height="709dp"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        tools:layout_editor_absoluteX="-5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_cate_admin"
+            android:layout_width="match_parent"
+            android:layout_height="696dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            tools:layout_editor_absoluteX="2dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_add"

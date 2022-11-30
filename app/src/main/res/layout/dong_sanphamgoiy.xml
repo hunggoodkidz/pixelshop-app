@@ -52,12 +52,6 @@
         android:text="255.555 Đ"
         android:textColor="#EC0453"
         android:textSize="16sp" />
-    <ImageView
-        android:layout_marginLeft="-10dp"
-        android:layout_marginTop="-25dp"
-        app:tint="#FF9800"
-        android:src="@drawable/rating"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+
 
 </LinearLayout>

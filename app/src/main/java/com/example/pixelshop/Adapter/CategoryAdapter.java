@@ -41,9 +41,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         CategoryModels categoryModels = categoryList.get(position);
 
         //holder.categoryName.setText(categoryModels.getTenloai());
-        Glide.with(context).load(categoryModels.getHinhanh()).placeholder(R.drawable.smartphone).into(holder.categoryImage);
+        //Glide.with(context).load(categoryModels.getHinhanh()).placeholder(R.drawable.smartphone).into(holder.categoryImage);
         String name = categoryList.get(position).getTenloai();
-        //Glide.with(context).load(categoryList.get(position).getHinhanh()).into(holder.categoryImage);
+        Glide.with(context).load(categoryList.get(position).getHinhanh()).into(holder.categoryImage);
 
         holder.setCategory(name,position);
     }

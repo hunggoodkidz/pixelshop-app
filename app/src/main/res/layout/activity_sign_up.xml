@@ -98,15 +98,15 @@
                 android:layout_height="65dp">
 
                 <EditText
-                    android:inputType="textPassword"
-                    android:singleLine="true"
-                    android:drawableRight="@drawable/ic_baseline_email_24"
-                    android:background="@android:color/background_light"
-
-                    android:hint="Nhập Lại Mật Khẩu"
                     android:id="@+id/editmatkhau_repeat"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp" />
+                    android:layout_height="65dp"
+                    android:background="@android:color/background_light"
+
+                    android:drawableRight="@drawable/ic_baseline_email_24"
+                    android:hint="Nhập Lại Mật Khẩu"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

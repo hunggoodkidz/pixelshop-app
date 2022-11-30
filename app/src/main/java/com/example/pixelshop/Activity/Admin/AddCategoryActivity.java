@@ -24,8 +24,10 @@ import androidx.core.app.ActivityCompat;
 import com.example.pixelshop.Model.CategoryModels;
 import com.example.pixelshop.Model.SanPhamModels;
 import com.example.pixelshop.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -36,27 +38,39 @@ import com.squareup.picasso.Picasso;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 public class AddCategoryActivity extends AppCompatActivity {
     private static final int LIBRARY_PICKER = 12312;
-    EditText edtNsx, edtTenLoai, edtTien, edtBh, edtSl, edtType, edtMt;
+    EditText edtTenLoai;
     ImageView imageView , btnBack;
-    Button btnDm, btnDel, btnEdit ;
+    Button btnAdd ;
     private Spinner spinerthongke;
     private List<String> list;
     FirebaseFirestore db;
     private String image = "";
     ProgressDialog dialog;
-    private SanPhamModels sanPhamModels;
     private CategoryModels categoryModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_category);
+        db = FirebaseFirestore.getInstance();
         Init();
+        if (categoryModels != null) {
 
+            edtTenLoai.setText(categoryModels.getTenloai());
+
+            if (!TextUtils.isEmpty(categoryModels.getHinhanh())) {
+                Picasso.get().load(categoryModels.getHinhanh()).into(imageView);
+                image = categoryModels.getHinhanh();
+            }
+
+        }
 
 
     }
@@ -69,56 +83,59 @@ public class AddCategoryActivity extends AppCompatActivity {
         dialog.setIndeterminate(true);
         dialog.setCanceledOnTouchOutside(false);
         edtTenLoai = findViewById(R.id.edt_tenloaisp);
-        edtTien = findViewById(R.id.edt_giatien);
-        edtSl = findViewById(R.id.edt_xuatxu);
-        edtType = findViewById(R.id.edt_type);
-        edtMt = findViewById(R.id.edt_mota);
         imageView = findViewById(R.id.image_add);
-
+        btnAdd = findViewById(R.id.btn_Add);
         btnBack = findViewById(R.id.btn_add_back);
-        if (categoryModels != null) {
 
-            edtTenLoai.setText(categoryModels.getTenloai());
-
-            if (!TextUtils.isEmpty(categoryModels.getHinhanh())) {
-                Picasso.get().load(categoryModels.getHinhanh()).into(imageView);
-                image = categoryModels.getHinhanh();
-            }
-
-        }
         imageView.setOnClickListener(view -> {
             pickImage();
         });
         findViewById(R.id.btn_add_back).setOnClickListener(view -> {
             finish();
         });
-        findViewById(R.id.btn_save).setOnClickListener(view -> {
-            if (!validate()) {
-                return;
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!validate()) {
+                    return;
+                }
+                try {
+                    CategoryModels sp = new CategoryModels();
+                    String id = UUID.randomUUID().toString();
+                    sp.setTenloai(edtTenLoai.getText().toString());
+                    sp.setHinhanh(image);
+                    sp.setId(id);
+                    db.collection("LoaiSP").document(id).set(sp).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(AddCategoryActivity.this, "Thành công!!!", Toast.LENGTH_SHORT).show();
+                            setResult(RESULT_OK);
+                            finish();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(AddCategoryActivity.this, "Thất bại!!!", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+//                    db.collection("LoaiSP").add(sp).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+//                        @Override
+//                        public void onSuccess(@NonNull DocumentReference documentReference) {
+//                            Toast.makeText(AddCategoryActivity.this, "Thành công!!!", Toast.LENGTH_SHORT).show();
+//                            setResult(RESULT_OK);
+//                            finish();
+//
+//                        }
+//                    }).addOnFailureListener(new OnFailureListener() {
+//                        @Override
+//                        public void onFailure(@NonNull Exception e) {
+//                            Toast.makeText(AddCategoryActivity.this, "Thất bại!!!", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-            try {
-                CategoryModels sp = new CategoryModels();
-
-                sp.setTenloai(edtTenLoai.getText().toString());
-                sp.setHinhanh(image);
-                db.collection("LoaiSP").add(sp).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(@NonNull DocumentReference documentReference) {
-                        Toast.makeText(AddCategoryActivity.this, "Thành công!!!", Toast.LENGTH_SHORT).show();
-                        setResult(RESULT_OK);
-                        finish();
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(AddCategoryActivity.this, "Thất bại!!!", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
         });
     }
     private boolean validate() {
@@ -126,34 +143,11 @@ public class AddCategoryActivity extends AppCompatActivity {
             Toast.makeText(this, "Vui lòng chọn hình ảnh", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (TextUtils.isEmpty(edtTien.getText().toString())) {
-            Toast.makeText(this, "Vui lòng nhập giá tiền", Toast.LENGTH_SHORT).show();
-            return false;
-        }
         if (TextUtils.isEmpty(edtTenLoai.getText().toString())) {
             Toast.makeText(this, "Vui lòng nhập tên sản phẩm", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (TextUtils.isEmpty(edtNsx.getText().toString())) {
-            Toast.makeText(this, "Vui lòng nhập nhà sản xuất", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        if (TextUtils.isEmpty(edtBh.getText().toString())) {
-            Toast.makeText(this, "Vui lòng nhập bảo hành", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        if (TextUtils.isEmpty(edtSl.getText().toString())) {
-            Toast.makeText(this, "Vui lòng nhập số lượng", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        if (TextUtils.isEmpty(edtType.getText().toString())) {
-            Toast.makeText(this, "Vui lòng nhập type", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        if (TextUtils.isEmpty(edtMt.getText().toString())) {
-            Toast.makeText(this, "Vui lòng nhập mô tả", Toast.LENGTH_SHORT).show();
-            return false;
-        }
+
 
         return true;
     }

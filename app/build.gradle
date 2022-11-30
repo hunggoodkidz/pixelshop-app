@@ -44,6 +44,7 @@ android {
 }
 //add các thư viện
 dependencies {
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation platform('com.google.firebase:firebase-bom:31.0.2') // Import the Firebase BoM
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'

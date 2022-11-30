@@ -2,12 +2,15 @@ package com.example.pixelshop.Activity;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,10 +35,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class SearchActivity  extends AppCompatActivity implements SanPhamView{
 
-
+    private boolean isFirst=true;
     private FirebaseFirestore db;
     private ListView listSearch;
     private AutoCompleteTextView txtSearch;
@@ -45,6 +49,8 @@ public class SearchActivity  extends AppCompatActivity implements SanPhamView{
     private SanPhamPreSenter sanPhamPreSenter;
     private SanPhamAdapter sanPhamAdapter;
     private RecyclerView rcvSearch;
+    private ImageView btnMic;
+    private static final int REQUEST_CODE_SPEECH_INPUT = 1;
 
 
 
@@ -61,6 +67,7 @@ public class SearchActivity  extends AppCompatActivity implements SanPhamView{
         db = FirebaseFirestore.getInstance();
         rcvSearch = (RecyclerView) findViewById(R.id.rcvSearch);
         txtSearch = (AutoCompleteTextView) findViewById(R.id.txtSearch);
+        btnMic = (ImageView) findViewById(R.id.mic);
         list = new ArrayList<>();
         sanPhamPreSenter = new SanPhamPreSenter(this);
         arrayList  =new ArrayList<>();
@@ -98,6 +105,54 @@ public class SearchActivity  extends AppCompatActivity implements SanPhamView{
 
             }
         });
+        findViewById(R.id.back2).setOnClickListener(view -> {
+            finish();
+        });
+        btnMic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speak();
+            }
+        });
+    }
+
+    //https://stackoverflow.com/questions/58411113/speech-to-text-for-two-edit-texts-single-button
+    private void speak() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,"Nói gì đó đi bạn");
+
+        try{
+            startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT);
+        }
+        catch (Exception e){
+            Toast.makeText(this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case REQUEST_CODE_SPEECH_INPUT: {
+                if (resultCode == RESULT_OK && null != data) {
+                    if(isFirst){
+                        isFirst=false;
+                        ArrayList<String> result = data
+                                .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                        txtSearch.setText(result.get(0));
+                        //startAnother ActivityFor Result here but getting the second edittext
+                    }else{
+                        isFirst=true;
+                    }
+                }
+                break;
+            }
+
+        }
     }
 
     private void searchProductName(String name) {

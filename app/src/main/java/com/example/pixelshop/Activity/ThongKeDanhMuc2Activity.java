@@ -68,17 +68,17 @@ public class ThongKeDanhMuc2Activity extends AppCompatActivity implements SanPha
         list = new ArrayList<>();
         db= FirebaseFirestore.getInstance();
         //list.add("Chọn Danh Mục");
-        db.collection("LoaiSP").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-            @Override
-            public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
-               for(QueryDocumentSnapshot q :  queryDocumentSnapshots){
-                   list.add(q.getString("tenloai"));
-               }
-                ArrayAdapter arrayAdapter = new ArrayAdapter(ThongKeDanhMuc2Activity.this, android.R.layout.simple_list_item_1,list);
-               spinerthongke.setAdapter(arrayAdapter);
-
-            }
-        });
+//        db.collection("LoaiSP").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//            @Override
+//            public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
+//               for(QueryDocumentSnapshot q :  queryDocumentSnapshots){
+//                   list.add(q.getString("tenloai"));
+//               }
+//                ArrayAdapter arrayAdapter = new ArrayAdapter(ThongKeDanhMuc2Activity.this, android.R.layout.simple_list_item_1,list);
+//               spinerthongke.setAdapter(arrayAdapter);
+//
+//            }
+//        });
 
         if(intent.hasExtra("KEY")){
             arrayList.clear();
@@ -86,35 +86,32 @@ public class ThongKeDanhMuc2Activity extends AppCompatActivity implements SanPha
             if(sanPhamAdapter!=null){
                 sanPhamAdapter.notifyDataSetChanged();
             }
-            else{
-                Toast.makeText(this, "Không tìm thấy sản phẩm nào trong danh mục : "+key, Toast.LENGTH_SHORT).show();
-            }
 
             getSupportActionBar().setTitle(key);
           sanPhamPreSenter.HandlegetDataSanPham(key,1);
         }
-        spinerthongke.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    if(position>0){
-                        arrayList.clear();
-                        if(sanPhamAdapter!=null){
-                            sanPhamAdapter.notifyDataSetChanged();
-                        }
-                        sanPhamPreSenter.HandlegetDataSanPham(spinerthongke.getSelectedItem().toString(),1);
-
-                    }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
+//        spinerthongke.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                    if(position>0){
+//                        arrayList.clear();
+//                        if(sanPhamAdapter!=null){
+//                            sanPhamAdapter.notifyDataSetChanged();
+//                        }
+//                        sanPhamPreSenter.HandlegetDataSanPham(spinerthongke.getSelectedItem().toString(),1);
+//
+//                    }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
     }
 
     private void InitWidget() {
-        spinerthongke = findViewById(R.id.spinner);
+        //spinerthongke = findViewById(R.id.spinner);
         toolbar = findViewById(R.id.toolbar);
         rCvSP = findViewById(R.id.rcvDanhMuc);
     }

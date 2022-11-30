@@ -27,7 +27,13 @@
             android:name="com.example.pixelshop.Activity.Admin.AddCategoryActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.pixelshop.Activity.Admin.StaticThongKe"
+            android:exported="false" />
+        <activity
             android:name="com.example.pixelshop.Activity.Account.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.pixelshop.Activity.Account.ChangePasswordActivity"
             android:exported="false" />
         <activity
             android:name="com.example.pixelshop.Activity.Admin.ProductActivity"

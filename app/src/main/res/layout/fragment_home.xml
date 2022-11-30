@@ -1,4 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".HomeFragment">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="@drawable/bannertop"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/orchid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/milkshake"
+                android:text="Pixel Shop"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/home_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/orchid"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="55dp"
+                android:background="@drawable/border"
+                android:drawableRight="@drawable/ic_baseline_search_24"
+                android:gravity="center|left"
+                android:paddingStart="10dp"
+                android:text="Bạn muốn tìm gì hôm nay ?"
+                android:textAllCaps="false"
+                android:textColor="#807A7A" />
+
+            <ImageView
+                android:id="@+id/shopcart"
+                android:layout_width="37dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24" />
+        </RelativeLayout>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -25,57 +84,81 @@
 
         </androidx.cardview.widget.CardView>
 
-            <ImageButton
-                android:id="@+id/home_danhmuc"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="15dp"
-                 />
 
-        <TextView
-            android:id="@+id/txtcategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:elevation="5dp"
-            android:text="Danh Sách Sản Phẩm"
-            android:textColor="@color/purple_200"
-            android:textSize="16sp"
-            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvCategory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
+            android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
         <TextView
             android:id="@+id/txtsp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:layout_weight="1"
             android:elevation="5dp"
             android:text="Danh Sách Sản Phẩm"
             android:textColor="@color/purple_200"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/xemthem1"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="5dp"
+            android:text="Xem thêm"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/purple_200"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvSP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:elevation="5dp"
+                android:text="Sản phẩm nổi bật"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/xemthem2"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="5dp"
+                android:text="Xem thêm"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/purple_200"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:elevation="5dp"
-            android:text="Sản Phẩm Nổi Bật"
-            android:textColor="@color/purple_200"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+        </LinearLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvNB"
@@ -87,7 +170,7 @@
             android:layout_marginLeft="10dp"
             android:elevation="5dp"
             android:layout_marginTop="10dp"
-            android:text="Bạn ơi đặt mua ngay"
+            android:text="Quảng cáo"
             android:textColor="@color/purple_200"
             android:layout_marginBottom="2dp"
             android:textSize="16sp"
@@ -173,30 +256,70 @@
     </HorizontalScrollView>
 
 </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"
-            android:elevation="5dp"
-            android:text="Đa dạng sản phẩm chính hãng"
-            android:textColor="@color/purple_200"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:elevation="5dp"
+                android:text="Chính hãng"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/xemthem3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="5dp"
+                android:text="Xem thêm"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/purple_200"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvTU"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:elevation="5dp"
+                android:text="Hàng hiệu"
+                android:textColor="@color/purple_200"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/xemthem4"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="5dp"
+                android:text="Xem thêm"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/purple_200"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_width="390dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/banner67"
-       />
+
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvHQ"
             android:layout_width="match_parent"
@@ -207,32 +330,17 @@
             android:layout_margin="10dp"
             android:elevation="5dp"
             android:layout_marginLeft="10dp"
-            android:text="Hỗ trợ trả góp lãi xuất 0%"
+            android:text="Trả góp lãi xuất 0%"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="-10dp"
-            android:text="gợi ý list..."
-            android:textColor="#c0c0c0"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvMC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <ImageView
-            android:layout_width="370dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/banner56"
-            />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -248,12 +356,7 @@
             android:id="@+id/rcvYT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <ImageView
-            android:layout_width="390dp"
-            android:layout_height="180dp"
 
-            android:background="@drawable/banner34"
-            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -261,7 +364,7 @@
             android:layout_margin="10dp"
             android:layout_marginLeft="10dp"
             android:elevation="5dp"
-            android:text="Family Content"
+            android:text="Mục gaming"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -280,13 +383,6 @@
             android:id="@+id/rcvLau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <ImageView
-            android:layout_width="390dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
-            android:paddingRight="-200dp"
-            android:background="@drawable/banner34"
-            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -305,3 +401,5 @@
     </LinearLayout>
 
 </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

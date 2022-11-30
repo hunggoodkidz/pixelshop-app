@@ -1,41 +1,105 @@
 package com.example.pixelshop.Activity.Admin;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.example.pixelshop.Adapter.CategoryAdapter;
+import com.example.pixelshop.Model.CategoryModels;
 import com.example.pixelshop.Model.SanPhamModels;
 import com.example.pixelshop.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class AddCategoryAdminActivity extends AppCompatActivity {
-    private static final int LIBRARY_PICKER = 12312;
-    EditText edtNsx, edtTenSp, edtTien, edtBh, edtSl, edtType, edtMt;
-    ImageView imageView , btnBack;
-    Button btnDm, btnDel, btnEdit ;
-    private Spinner spinerthongke;
+public class AddCategoryAdminActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+    private SwipeRefreshLayout swipeRefreshLayout;
     private List<String> list;
     FirebaseFirestore db;
-    private String image = "";
-    ProgressDialog dialog;
-    private SanPhamModels sanPhamModels;
+    RecyclerView rcvCategory;
+    ImageView btnDelete;
 
+    //Category
+
+    List<CategoryModels> categoryList;
+    CategoryAddAdapter categoryAdapter;
+    CategoryModels categoryModels;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_category_admin);
-
-
+        swipeRefreshLayout = findViewById(R.id.swiperefresh);
         findViewById(R.id.image_add).setOnClickListener(view -> {
             startActivityForResult(new Intent(AddCategoryAdminActivity.this, AddCategoryActivity.class), 100);
         });
+
+        Init();
+        swipeRefreshLayout.setOnRefreshListener(this);
+    }
+
+    private void Init(){
+        categoryList = new ArrayList<>();
+        categoryAdapter = new CategoryAddAdapter(this,categoryList);
+        rcvCategory = findViewById(R.id.rcv_cate_admin);
+
+        //Category
+        db= FirebaseFirestore.getInstance();
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
+        rcvCategory.setHasFixedSize(true);
+        rcvCategory.setLayoutManager(layoutManager);
+
+        //categoryList = new ArrayList<>();
+        //categoryAdapter = new CategoryAdapter(getContext(), categoryList);
+        rcvCategory.setAdapter(categoryAdapter);
+
+        db.collection("LoaiSP")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @SuppressLint("NotifyDataSetChanged")
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                CategoryModels categoryModels = document.toObject(CategoryModels.class);
+                                categoryList.add(categoryModels);
+
+                            }
+                            categoryAdapter.notifyDataSetChanged();
+                        } else {
+//                            Toast.makeText(get, "Error"+task.getException(),
+//                                    Toast.LENGTH_SHORT).show();
+                            Log.d("TAG", task.getException().getMessage());
+                        }
+                    }
+                });
+
+    }
+
+
+    @Override
+    @SuppressLint("NotifyDataSetChanged")
+    public void onRefresh() {
+        categoryAdapter.notifyDataSetChanged();
+        swipeRefreshLayout.setRefreshing(false);
     }
 }

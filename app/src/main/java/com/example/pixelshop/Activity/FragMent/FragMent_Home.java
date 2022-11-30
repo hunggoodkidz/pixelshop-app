@@ -1,6 +1,7 @@
 package com.example.pixelshop.Activity.FragMent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -14,8 +15,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.pixelshop.Activity.Bill.CartActivity;
+import com.example.pixelshop.Activity.HomeActivity;
+import com.example.pixelshop.Activity.SearchActivity;
 import com.example.pixelshop.Adapter.CategoryAdapter;
 import com.example.pixelshop.Model.CategoryModels;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -36,6 +41,7 @@ import java.util.List;
 
 public class FragMent_Home  extends Fragment implements SanPhamView {
     View view;
+    private SwipeRefreshLayout swipeRefreshLayout;
     private ArrayList<String> arrayList;
     private ViewPager viewPager;
     private FirebaseFirestore db;
@@ -71,13 +77,14 @@ public class FragMent_Home  extends Fragment implements SanPhamView {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home,container,false);
+
         InitWidget();
         Init();
         InitSanPham();
 
-        imgBtnDanhMuc.setOnClickListener(view ->{
-            activityCallback.onButtonClick();
-        });
+//        imgBtnDanhMuc.setOnClickListener(view ->{
+//            activityCallback.onButtonClick();
+//        });
 
         return  view;
     }
@@ -133,6 +140,15 @@ public class FragMent_Home  extends Fragment implements SanPhamView {
 
             }
         });
+        //Top
+        view.findViewById(R.id.home_search).setOnClickListener(view -> {
+            startActivity(new Intent(getActivity(), SearchActivity.class));
+        });
+
+        view.findViewById(R.id.shopcart).setOnClickListener(view -> {
+            startActivity(new Intent(getActivity(), CartActivity.class));
+        });
+
 
         //Category
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -166,6 +182,7 @@ public class FragMent_Home  extends Fragment implements SanPhamView {
 
     }
 
+
     private void InitWidget() {
         viewPager = view.findViewById(R.id.viewpager);
 
@@ -178,7 +195,7 @@ public class FragMent_Home  extends Fragment implements SanPhamView {
         rcvSPYT = view.findViewById(R.id.rcvYT);
         rcvSPLau = view.findViewById(R.id.rcvLau);
         rcvSPGY = view.findViewById(R.id.rcvGY);
-        imgBtnDanhMuc = view .findViewById(R.id.home_danhmuc);
+        //imgBtnDanhMuc = view .findViewById(R.id.home_danhmuc);
     }
 
     @Override

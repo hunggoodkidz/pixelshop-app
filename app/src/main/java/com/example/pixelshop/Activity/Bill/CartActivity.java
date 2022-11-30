@@ -189,8 +189,9 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
                 }else{
                     Toast.makeText(CartActivity.this, "Họ tên không để trống", Toast.LENGTH_SHORT).show();
                 }
-
             }
+
+
         });
 
 
@@ -202,7 +203,7 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
         rcVBill = findViewById(R.id.rcvBill);
         btnthanhtoan = findViewById(R.id.btnthanhtoan);
         progressBar= findViewById(R.id.progressbar);
-        TextView txtTotal = findViewById(R.id.txt_amount);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(" Giỏ hàng");

@@ -29,7 +29,7 @@ public class ChartMenuActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()){
 
             case R.id.cThongKeDonHang: startActivity(new Intent( ChartMenuActivity.this,ChartBillActivity.class));break;
-
+            case R.id.cThongKeDoanhThu: startActivity(new Intent( ChartMenuActivity.this,StaticThongKe.class));break;
         }
     }
 

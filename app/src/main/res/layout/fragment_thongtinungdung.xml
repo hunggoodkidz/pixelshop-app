@@ -75,7 +75,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15sp"
-        android:text="Chân thành cảm ơn: "
         android:textColor="#ff0000"
         android:textSize="17sp" />
 
@@ -84,7 +83,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="-10dp"
-        android:text="   TS. xxxx"
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />
@@ -94,7 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="8dp"
-        android:text="   GV. Trường đại học xxx thành phố hồ chí minh đã hướng dẫn nhóm em hoàn thành dự án này"
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />
@@ -104,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="10dp"
-        android:text="Địa chỉ:"
+        android:text="Lớp"
         android:textAllCaps="true"
         android:textColor="#ff0000"
         android:textSize="15sp" />
@@ -114,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="8dp"
-        android:text="   Trường Đại học xxxx"
+        android:text="19DTHC3"
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />
@@ -134,6 +131,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="8dp"
+        android:text="Đại học Hutech"
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />

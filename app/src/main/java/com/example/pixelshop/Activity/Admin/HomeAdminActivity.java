@@ -35,8 +35,6 @@ public class HomeAdminActivity  extends AppCompatActivity implements View.OnClic
             case R.id.cSignOut: finish();break;
             case R.id.imgdangsanpham: startActivity(new Intent( HomeAdminActivity.this, ProductActivity.class));break;
 
-
-
         }
     }
 

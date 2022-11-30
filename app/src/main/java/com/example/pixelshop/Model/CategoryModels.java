@@ -3,6 +3,7 @@ package com.example.pixelshop.Model;
 
 public class CategoryModels {
 
+    private String id;
     private String tenloai;
     private String hinhanh;
 
@@ -10,10 +11,14 @@ public class CategoryModels {
     }
 
 
-    public CategoryModels(String tenloai, String hinhanh) {
+    public CategoryModels(String tenloai, String hinhanh, String id) {
         this.tenloai = tenloai;
         this.hinhanh = hinhanh;
+        this.id = id;
     }
+    public String getId( ) {return id;}
+
+    public void setId(String id){this.id = id; }
 
     public String getTenloai() {
         return tenloai;

@@ -18,7 +18,7 @@
        android:layout_height="wrap_content">
        <TextView
            android:padding="10dp"
-           android:textColor="#ff0000"
+           android:textColor="#0048FF"
            android:textSize="23sp"
            android:text="PC 2021 Asus"
            android:id="@+id/txttensp"
