@@ -96,16 +96,5 @@ public class ChartBillActivity  extends AppCompatActivity  {
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
     }
 }

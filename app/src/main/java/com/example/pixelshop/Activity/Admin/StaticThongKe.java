@@ -47,7 +47,7 @@ import java.util.List;
 public class StaticThongKe extends AppCompatActivity {
     private Spinner spinner, sprinerweek;
     private HorizontalBarChart chartMonth, chartWeek;
-    private TextView tvdaonhthu;
+    private TextView tvdaonhthu, txdoanhthuthanhtoan;
     private FirebaseFirestore db;
 
     List<HoaDon2Models> listdondat;
@@ -62,27 +62,31 @@ public class StaticThongKe extends AppCompatActivity {
         sprinerweek = findViewById(R.id.spinner_month);
         chartMonth = findViewById(R.id.chartMonth);
         tvdaonhthu = findViewById(R.id.tvdoanhthu);
+        txdoanhthuthanhtoan = findViewById(R.id.tvdoanhthuthanhtoan);
         chartWeek = findViewById(R.id.chatweek);
         spinner = (Spinner) findViewById(R.id.spinner_year);
 
 
         db = FirebaseFirestore.getInstance();
-        HandleReadData2();
 
         db.collection("HoaDon").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
                 long total = 0;
-                for(QueryDocumentSnapshot q : queryDocumentSnapshots){
+                long totalthanhtoan = 0;
+                    for(QueryDocumentSnapshot q : queryDocumentSnapshots){
+                        if(q.getLong("trangthai")==3){
+                            long itemCost2 = q.getLong("tongtien");
+                            totalthanhtoan += itemCost2;
+                        }
                     long itemCost = q.getLong("tongtien");
                     total += itemCost;
                 }
                 DecimalFormat formatter = new DecimalFormat("###,###,###,###");
                 tvdaonhthu.setText(formatter.format(total) + " VNĐ");
+                txdoanhthuthanhtoan.setText(formatter.format(totalthanhtoan) + " VNĐ");
             }
         });
-
-
 
         List<Integer> years = new ArrayList<>();
         List<Integer> month = new ArrayList<>();
@@ -160,38 +164,55 @@ public class StaticThongKe extends AppCompatActivity {
     }
 
     private void setDataweek(Integer month) throws ParseException {
-        ArrayList<BarEntry> monthChart = new ArrayList<>();
-        List<HoaDon2Models> filterDtaaW = filterMonth(month, listdondat);
-        Log.d("AAA", filterDtaaW.toString());
-        List<ThongkeThang> listthongke = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            ThongkeThang thongkeThang = new ThongkeThang();
-            thongkeThang.setThang(i);
-            long price = 0;
-            for (HoaDon2Models object : filterDtaaW) {
-                if (getWEEK(object.getNgaydat()) == i) {
-                    //price += Long.valueOf(object.getTongtien());
-                    price += object.getTongtien();
-                }
-            }
-            thongkeThang.setPrice(price);
-            listthongke.add(thongkeThang);
-        }
-        for (ThongkeThang object : listthongke) {
-            Log.d("ARR", object.toString());
-            monthChart.add(new BarEntry((float) object.getThang(), (float) (object.getPrice() / 1000)));
-        }
-        BarDataSet set1;
-        set1 = new BarDataSet(monthChart, "ĐƠN VỊ 1000 VND");
-        set1.setValueTextSize(14);
-        set1.setColors(ColorTemplate.COLORFUL_COLORS);
-        BarData barData = new BarData(set1);
-        barData.setValueTextSize(14);
-        XAxis xl = chartWeek.getXAxis();
-        chartWeek.setBackgroundColor(Color.parseColor("#ffffcc"));
-        xl.setTextSize(14);
 
-        chartWeek.setData(barData);
+        db.collection("HoaDon")
+                .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
+                        ArrayList<BarEntry> monthChart = new ArrayList<>();
+                        List<HoaDon2Models> filterDtaaW = filterMonth(month, listdondat);
+                            for(QueryDocumentSnapshot d : queryDocumentSnapshots){
+                                HoaDon2Models HoaDon2Models1 = d.toObject(HoaDon2Models.class);
+                                filterDtaaW.add(HoaDon2Models1);
+                            }
+                        Log.d("AAA", filterDtaaW.toString());
+                        List<ThongkeThang> listthongke = new ArrayList<>();
+                        for (int i = 1; i <= 5; i++) {
+                            ThongkeThang thongkeThang = new ThongkeThang();
+                            thongkeThang.setThang(i);
+                            long price = 0;
+                            for (HoaDon2Models object : filterDtaaW) {
+                                try {
+                                    if (getWEEK(object.getNgaydat()) == i) {
+                                        //price += Long.valueOf(object.getTongtien());
+                                        price += object.getTongtien();
+                                    }
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            thongkeThang.setPrice(price);
+                            listthongke.add(thongkeThang);
+                        }
+                        for (ThongkeThang object : listthongke) {
+                            Log.d("ARR", object.toString());
+                            monthChart.add(new BarEntry((float) object.getThang(), (float) (object.getPrice() / 1000)));
+                        }
+                        BarDataSet set1;
+                        set1 = new BarDataSet(monthChart, "ĐƠN VỊ 1000 VND");
+                        set1.setValueTextSize(14);
+                        set1.setColors(ColorTemplate.COLORFUL_COLORS);
+                        BarData barData = new BarData(set1);
+                        barData.setValueTextSize(14);
+                        XAxis xl = chartWeek.getXAxis();
+                        chartWeek.setBackgroundColor(Color.parseColor("#ffffcc"));
+                        xl.setTextSize(14);
+
+                        chartWeek.setData(barData);
+
+                    }
+                });
+
     }
 
     private int getWEEK(String thoiGianKT) throws ParseException {
@@ -200,51 +221,58 @@ public class StaticThongKe extends AppCompatActivity {
         return calendar.get(Calendar.WEEK_OF_MONTH);
     }
 
-    private List<HoaDon2Models> filterMonth(Integer month, List<HoaDon2Models> filtedata) {
-        List<HoaDon2Models> dataNew = new ArrayList<>();
-        for (HoaDon2Models object : filtedata) {
-            if (getMonth(object.getNgaydat()) == month) {
-                Log.d("SSS", object.toString());
-                dataNew.add(object);
-            }
-        }
-        return dataNew;
-    }
 
+    private void setData(int year) {
 
-    private void setData(int year) throws ParseException {
-        ArrayList<BarEntry> monthChart = new ArrayList<>();
-        listdondat = filterYear(year, HandleReadData2());
-        Log.d("AAA", HandleReadData2().toString());
-        List<ThongkeThang> listthongke = new ArrayList<>();
-        for (int i = 1; i < 13; i++) {
-            ThongkeThang thongkeThang = new ThongkeThang();
-            thongkeThang.setThang(i);
-            long price = 0;
-            for (HoaDon2Models object : listdondat) {
-                if (getMonth(object.getNgaydat()) == i) {
-                    price += object.getTongtien();
-                }
-            }
-            thongkeThang.setPrice(price);
-            listthongke.add(thongkeThang);
-        }
+        db.collection("HoaDon")
+                .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
+                        ArrayList<BarEntry> monthChart = new ArrayList<>();
+                        List<HoaDon2Models> hoaDon2Models = new ArrayList<>();
+                            for(QueryDocumentSnapshot d : queryDocumentSnapshots){
+                                HoaDon2Models HoaDon2Models1 = d.toObject(HoaDon2Models.class);
+                                hoaDon2Models.add(HoaDon2Models1);
+                            }
+                        try {
+                            listdondat = filterYear(year, hoaDon2Models);
+                            Log.d("AAA", hoaDon2Models.toString());
+                            List<ThongkeThang> listthongke = new ArrayList<>();
+                            for (int i = 1; i < 13; i++) {
+                                ThongkeThang thongkeThang = new ThongkeThang();
+                                thongkeThang.setThang(i);
+                                long price = 0;
+                                for (HoaDon2Models object : listdondat) {
+                                    if (getMonth(object.getNgaydat()) == i) {
+                                        price += object.getTongtien();
+                                    }
+                                }
+                                thongkeThang.setPrice(price);
+                                listthongke.add(thongkeThang);
+                            }
 
-        for (ThongkeThang object : listthongke) {
-            Log.d("ARR", object.toString());
-            monthChart.add(new BarEntry((float) object.getThang(), (float) (object.getPrice() / 1000)));
-        }
+                            for (ThongkeThang object : listthongke) {
+                                Log.d("ARR", object.toString());
+                                monthChart.add(new BarEntry((float) object.getThang(), (float) (object.getPrice() / 1000)));
+                            }
 
-        BarDataSet set1;
-        set1 = new BarDataSet(monthChart, "ĐƠN VỊ 1000 VND");
-        set1.setValueTextSize(14);
-        set1.setColors(ColorTemplate.COLORFUL_COLORS);
-        BarData barData = new BarData(set1);
-        barData.setValueTextSize(14);
-        XAxis xl = chartMonth.getXAxis();
-        xl.setTextSize(14);
+                            BarDataSet set1;
+                            set1 = new BarDataSet(monthChart, "ĐƠN VỊ 1000 VND");
+                            set1.setValueTextSize(14);
+                            set1.setColors(ColorTemplate.COLORFUL_COLORS);
+                            BarData barData = new BarData(set1);
+                            barData.setValueTextSize(14);
+                            XAxis xl = chartMonth.getXAxis();
+                            xl.setTextSize(14);
 
-        chartMonth.setData(barData);
+                            chartMonth.setData(barData);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                });
+
 
     }
 
@@ -274,6 +302,17 @@ public class StaticThongKe extends AppCompatActivity {
         }
         return dataNew;
     }
+    private List<HoaDon2Models> filterMonth(Integer month, List<HoaDon2Models> filtedata) {
+        List<HoaDon2Models> dataNew = new ArrayList<>();
+        for (HoaDon2Models object : filtedata) {
+            if (getMonth(object.getNgaydat()) == month) {
+                Log.d("SSS", object.toString());
+                dataNew.add(object);
+            }
+        }
+        return dataNew;
+    }
+
 
     private int getYear(String thoiGianKT) throws ParseException {
         Date date = null;
@@ -282,32 +321,25 @@ public class StaticThongKe extends AppCompatActivity {
     }
 
     private Date convertStringToDate(String thoiGianKT) throws ParseException {
-        return new SimpleDateFormat("dd-MM-yyyy").parse(thoiGianKT);
+        return new SimpleDateFormat("dd/MM/yyyy").parse(thoiGianKT);
         //Log.d("DATEE", convertStringToDate(thoiGianKT));
     }
+
     public List<HoaDon2Models> HandleReadData2(){
-        List<HoaDon2Models> HoaDon2Models = new ArrayList<HoaDon2Models>();
+        List<HoaDon2Models> hoaDon2Models = new ArrayList<HoaDon2Models>();
         db.collection("HoaDon")
                 .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
                         if(queryDocumentSnapshots.size()>0){
-
                             for(QueryDocumentSnapshot d : queryDocumentSnapshots){
-//                                callback.getDataHD(d.getId(),d.getString("UID"),d.getString("diachi"),
-//                                        d.getString("hoten"),d.getString("ngaydat"),d.getString("phuongthuc"),d.getString("sdt"),
-//                                        d.getLong("tongtien"),d.getLong("trangthai"));
                                 HoaDon2Models HoaDon2Models1 = d.toObject(HoaDon2Models.class);
-                                HoaDon2Models.add(HoaDon2Models1);
-
+                                hoaDon2Models.add(HoaDon2Models1);
                             }
-                            Log.d("GETLIST", HoaDon2Models.toString());
-
                         }
                     }
-
                 });
-        return HoaDon2Models;
+        return hoaDon2Models;
     }
 
     private class ThongkeThang {

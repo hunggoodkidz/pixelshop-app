@@ -48,7 +48,7 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
     private RecyclerView rcVBill;
     private GioHangAdapter sanPhamAdapter;
     private GioHangPreSenter gioHangPreSenter;
-    private ArrayList<SanPhamModels> arrayList;
+    private ArrayList<SanPhamModels> arrayList,giohangList;
     private Button btnthanhtoan;
     private  String s[]={"Thanh toán khi nhận hàng","Thanh toán MOMO"};
     private  long tongtien = 0;
@@ -58,6 +58,7 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
     private  Spinner spinner;
     private  int check =  0 ;
     private Toolbar toolbar;
+    private TextView txtamount;
 
    
     @Override
@@ -115,6 +116,12 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
         };
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(rcVBill);
+
+//        tongtien1 = 0 ;
+//        for (SanPhamModels sanPhamModels : arrayList) {
+//            tongtien1 += sanPhamModels.getGiatien()  * sanPhamModels.getSoluong();
+//        }
+
     }
 
     private void DiaLogThanhToan() {
@@ -144,7 +151,7 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
                 tongtien += sanPhamModels.getGiatien()  * sanPhamModels.getSoluong();
             }
 
-
+        txtamount.setText(NumberFormat.getInstance().format(tongtien) + " Đ");
 
         dialog.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,7 +179,6 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
                                     dialog.cancel();break;
                                 case 1:
                                     AppMoMoLib.getInstance().setEnvironment(AppMoMoLib.ENVIRONMENT.DEVELOPMENT);
-
                                     requestPayment();
                                     dialog.cancel();
                                     break;
@@ -190,19 +196,16 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
                     Toast.makeText(CartActivity.this, "Họ tên không để trống", Toast.LENGTH_SHORT).show();
                 }
             }
-
-
         });
-
-
-
 
     }
 
     private void InitWidget() {
+
         rcVBill = findViewById(R.id.rcvBill);
         btnthanhtoan = findViewById(R.id.btnthanhtoan);
         progressBar= findViewById(R.id.progressbar);
+        txtamount = findViewById(R.id.txt_amount);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -215,6 +218,7 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
                 finish();
             }
         });
+
 
 
     }
@@ -308,11 +312,9 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
                     String checked = data.getStringExtra("message");
                     Log.d("CHECKED",checked);
                     Calendar calendar=Calendar.getInstance();
-                    SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+                    SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/MM/yyyy");
                     gioHangPreSenter.HandleAddHoaDon(simpleDateFormat.format(calendar.getTime()),diachi,hoten,sdt,spinner.getSelectedItem().toString(),tongtien,arrayList);
                     progressBar.setVisibility(View.GONE);
-
-
                     String token = data.getStringExtra("data"); //Token response
                     String phoneNumber = data.getStringExtra("phonenumber");
                     String env = data.getStringExtra("env");
@@ -345,6 +347,5 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
             Log.d("Message Fail 4 : ","message: " + "Get token " + data.getStringExtra("message"));
         }
     }
-
 
 }

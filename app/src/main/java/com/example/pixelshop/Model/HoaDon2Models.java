@@ -3,6 +3,19 @@ package com.example.pixelshop.Model;
 
 public class HoaDon2Models {
 
+    @Override
+    public String toString() {
+        return "HoaDonReRach{" +
+                "UID=" + UID +
+                ", diachi=" + diachi +
+                ", hoten=" + hoten +
+                ", ngaydat='" + ngaydat + '\'' +
+                ", sdt='" + sdt + '\'' +
+                ", tongtien='" + tongtien + '\'' +
+                ", trangthai='" + trangthai + '\'' +
+                '}';
+    }
+
     private  String UID;
     private  String diachi;
     private  String hoten;

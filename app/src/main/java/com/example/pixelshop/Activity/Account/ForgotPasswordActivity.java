@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pixelshop.R;
@@ -21,6 +22,7 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
     private EditText emailEditText;
     private Button resetPasswordButton;
     private ProgressBar progressBar;
+    private TextView hint;
 
     FirebaseAuth auth;
 
@@ -31,6 +33,7 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
 
         emailEditText = (EditText) findViewById(R.id.editEmail);
         resetPasswordButton = (Button) findViewById(R.id.btnresetpassword);
+        hint = findViewById(R.id.hint);
 
         auth = FirebaseAuth.getInstance();
         Init();
@@ -41,6 +44,13 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
                 onClickResetPassword();
             }
         });
+        hint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
 
     }
     private void Init() {

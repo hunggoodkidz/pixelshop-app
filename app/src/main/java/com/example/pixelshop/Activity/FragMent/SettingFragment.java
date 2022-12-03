@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.pixelshop.Activity.Account.ChangePasswordActivity;
+import com.example.pixelshop.Activity.Account.EditProfileActivity;
 import com.example.pixelshop.Activity.Account.SignInActivity;
 import com.example.pixelshop.Activity.Admin.HomeAdminActivity;
 import com.example.pixelshop.Activity.Bill.CartActivity;
@@ -120,7 +121,7 @@ public class SettingFragment extends Fragment {
             getActivity().finish();
         });
         view.findViewById(R.id.clickProfile).setOnClickListener(view -> {
-            new FragMent_Home();
+            startActivity(new Intent(getActivity(), EditProfileActivity.class));
         });
         view.findViewById(R.id.clickSetting).setOnClickListener(view -> {
             startActivity(new Intent(getActivity(), ChangePasswordActivity.class));

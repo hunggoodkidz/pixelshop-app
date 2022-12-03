@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content"
+    android:background="#f8f8ff">
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/hinhanh"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:padding="10dp"
+           android:textColor="#0048FF"
+           android:textSize="23sp"
+           android:text="PC 2021 Asus"
+           android:id="@+id/txttensp"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+       <TextView
+
+           android:padding="10dp"
+           android:textColor="#000000"
+           android:textSize="20sp"
+           android:text="255.555 Đ"
+           android:id="@+id/txtgiatien"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+       <TextView
+
+           android:padding="10dp"
+           android:textColor="#008000"
+           android:textSize="18sp"
+           android:text="1"
+           android:id="@+id/txtsoluong"
+           android:maxLines="1"
+           android:singleLine="true"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="right"
+           android:gravity="center"
+           android:layout_marginTop="8dp">
+
+           <ImageButton
+               android:id="@+id/btnback"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="10dp"
+               android:layout_marginRight="10dp"
+               android:background="@drawable/borderline"
+               android:src="@drawable/ic_baseline_remove" />
+
+           <TextView
+               android:id="@+id/txt_custompayment_SoLuong"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="15"
+               android:textColor="#000000"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:layout_toStartOf="@id/txt_custompayment_GiaTien"
+               android:layout_toLeftOf="@id/txt_custompayment_GiaTien"
+               android:textSize="20sp" />
+
+           <ImageButton
+               android:id="@+id/btn_increase"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/borderline"
+               android:src="@drawable/ic_baseline_add_24"
+               android:layout_marginLeft="10dp"
+               android:layout_marginStart="10dp" />
+       </LinearLayout>
+
+   </LinearLayout>
+
+</LinearLayout>

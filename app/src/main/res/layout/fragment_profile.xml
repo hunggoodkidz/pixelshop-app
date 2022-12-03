@@ -11,7 +11,11 @@
         android:background="@drawable/top_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </ImageView>
+
 
     <RelativeLayout
         android:layout_width="150dp"
@@ -29,6 +33,7 @@
             android:src="@drawable/ic_baseline_supervised_user_circle_24" />
 
         <ImageView
+            android:id="@+id/btnCamera"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_alignParentRight="true"
@@ -172,6 +177,20 @@
                     android:gravity="end"
                     android:text="Nhập email"
                     android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnGPS"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/mail" />
 
             </LinearLayout>
 

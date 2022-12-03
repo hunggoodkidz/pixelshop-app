@@ -53,7 +53,8 @@ public class ContentBillActivity extends AppCompatActivity implements GioHangVie
         InitWidget();
         Init();
     }
-    // set dữ liệu cho chi tiết hóa đơn
+
+
     private void Init() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Chi tiết hóa đơn");
@@ -67,7 +68,7 @@ public class ContentBillActivity extends AppCompatActivity implements GioHangVie
         intent=getIntent();
         hoaDonModels = (HoaDonModels) intent.getSerializableExtra("HD");
         int type = intent.getIntExtra("TYPE",0);
-        txtdiachi.setText("Địa chỉ : "+hoaDonModels.getDiachi());
+        txtdiachi.setText("Địa chỉ : "+hoaDonModels.getDiachi()); // Phuong thuc nhan hang
         txtmaHD.setText("Mã HD :"+hoaDonModels.getId());
         txthoten.setText("Họ tên : "+hoaDonModels.getHoten());
         txtsdt.setText("Liên hệ : "+hoaDonModels.getSdt());

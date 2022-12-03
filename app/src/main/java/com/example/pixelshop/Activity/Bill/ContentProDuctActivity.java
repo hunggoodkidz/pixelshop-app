@@ -1,6 +1,7 @@
 package com.example.pixelshop.Activity.Bill;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.pixelshop.Activity.Home2Activity;
+import com.example.pixelshop.Presenter.RateUsDialog;
 import com.squareup.picasso.Picasso;
 import com.example.pixelshop.Model.SanPhamModels;
 import com.example.pixelshop.Presenter.GioHangPreSenter;
@@ -28,7 +31,7 @@ ContentProDuctActivity extends AppCompatActivity implements GioHangView {
     private SanPhamModels sanPhamModels;
     private TextView txttensp, txtgiatien, txtmota, txtnsx, txtbaohanh;
     private Toolbar toolbar;
-    private ImageView hinhanh;
+    private ImageView hinhanh,btnBack, cart;
     private Button btndathang;
     private GioHangPreSenter gioHangPreSenter;
 
@@ -36,7 +39,7 @@ ContentProDuctActivity extends AppCompatActivity implements GioHangView {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_details);
+        setContentView(R.layout.activity_product_details_2);
         InitWidget();
         Init();
     }
@@ -51,9 +54,6 @@ ContentProDuctActivity extends AppCompatActivity implements GioHangView {
 //                finish();
 //            }
 //        });
-        findViewById(R.id.back2).setOnClickListener(view -> {
-            finish();
-        });
         intent=getIntent();
         sanPhamModels = (SanPhamModels) intent.getSerializableExtra("SP");
 //        txtnsx.setText("Bảo hành: "+sanPhamModels.getHansudung());
@@ -63,10 +63,34 @@ ContentProDuctActivity extends AppCompatActivity implements GioHangView {
         txttensp.setText(sanPhamModels.getTensp());
         Picasso.get().load(sanPhamModels.getHinhanh()).into(hinhanh);
         gioHangPreSenter = new GioHangPreSenter(this);
+
+
+
+
         btndathang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gioHangPreSenter.AddCart(sanPhamModels.getId());
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ContentProDuctActivity.this, CartActivity.class));
+            }
+        });
+        findViewById(R.id.btn_post).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RateUsDialog rateUsDialog = new RateUsDialog(ContentProDuctActivity.this);
+                rateUsDialog.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+                rateUsDialog.show();
             }
         });
 
@@ -82,7 +106,8 @@ ContentProDuctActivity extends AppCompatActivity implements GioHangView {
         txttensp=findViewById(R.id.txttensp);
         hinhanh=findViewById(R.id.image_product);
         btndathang=findViewById(R.id.btndathang);
-
+        btnBack = findViewById(R.id.back2);
+        cart = findViewById(R.id.cart);
     }
 
     @Override
