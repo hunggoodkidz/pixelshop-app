@@ -10,8 +10,9 @@ Stt | Mã sinh viên | Tên
 2 | 1911065415 | [Trần Lê Hoài Thy](https://www.facebook.com/thanhgiang.tran.1276)
 
 ### Features
-The application contains list of products such as shoes, slippers on which user can click to view its details and then, add them to cart. User can like and dislike the product as well. Also, User can sell products, if he/she signed up as a Seller.
+The application contains list of products such as shoes, slippers on which user can click to view its details and then, add them to cart. Also, User can sell products, if he/she signed up as a Seller.
 Some other features are as following:
+
 Khách hàng (User):
 - Đăng nhập/ đăng ký  (Có email xác nhận verify) 
 - Xem chi tiết sản phẩm
